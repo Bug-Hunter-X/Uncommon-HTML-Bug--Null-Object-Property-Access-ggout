@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    // Attempting to access a non-existent property of a null object
+    let element = document.getElementById('nonExistentElement');
+    if(element){
+        console.log(element.textContent);
+    }else{
+        console.error('Element not found');
+    }
+    
+    //This will throw an error because the element may not exist
+    document.getElementById('myDiv').nonExistentProperty = 'someValue';
+  </script>
+</body>
+</html>
