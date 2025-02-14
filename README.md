@@ -1,0 +1,1 @@
+This repository demonstrates a subtle bug in HTML that can occur when working with DOM elements. The script attempts to access properties of an element that might not exist, resulting in an error.  The solution provides a safe way to handle potential null values when interacting with the DOM.
