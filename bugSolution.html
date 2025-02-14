@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    //Safe way to access element properties
+    let element = document.getElementById('myDiv');
+    if (element) {
+      console.log(element.textContent);
+      //Check if property exists before accessing
+      if(element.hasOwnProperty('textContent')){
+          console.log(element.textContent);
+      }
+    } else {
+      console.error('Element not found');
+    }
+  </script>
+</body>
+</html>
